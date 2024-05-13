@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+  background: #acb6e5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b8f5ea, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b8f5ea, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.image-container {
+  padding-top: 120px;
+  position: relative;
+}
+
+/* 아티스트 */
+.artist-container {
+  display: flex; /* 자식 요소를 가로로 배치 */
+  align-items: center; /* 세로 가운데 정렬*/
+}
+
+.artist-container.reverse {
+  flex-direction: row-reverse; /* 요소들을 역순으로 배치하여 사진을 오른쪽에, 텍스트를 왼쪽에 배치 */
+}
+
+
+.card-img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.zoom {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* 이미지 위에 어두운 오버레이 */
+  opacity: 0; /* 초기에는 투명하게 설정 */
+  transition: opacity 0.5s ease; /* 호버 시에 부드럽게 투명도 조절 */
+}
+
+.card-img-container:hover .zoom {
+  opacity: 1; /* 호버 시에 오버레이가 나타납니다. */
+}
+
+.card-img-container:hover .card-img-top {
+  transform: scale(1.2); /* 호버 시에 이미지를 1.2배 확대합니다. */
+}
+
+.card-title {
+  font-size: 80px;
+  background: linear-gradient(to right top, #E0EAFC, #CFDEF3); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* 텍스트를 투명하게 설정 */
+}
+
+.card-title.age{
+  font-size: 50px; /* 원하는 크기로 설정 */
+}
+.card-title.position{
+  font-size: 50px; /* 원하는 크기로 설정 */
+}
+
