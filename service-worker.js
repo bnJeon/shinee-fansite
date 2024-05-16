@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/shinee-fansite/precache-manifest.991920e01499b6946081a2a1634c6ec8.js"
+  "/shinee-fansite/precache-manifest.ec3a1835980679b520df316700c59a9c.js"
 );
 
 self.addEventListener('message', (event) => {
