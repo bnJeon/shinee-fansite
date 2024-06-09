@@ -8,3 +8,13 @@ https://ssuasea.github.io/shinee-fansite/
 ```bash
 npm install express
 ```
+
+## 리액트 쿼리 설치
+```
+npm i react-query
+```
+
+## React Native Sound를 사용할거기때문에 react-native-sound를 인스톨 
+```
+npm install react-native-sound
+```
