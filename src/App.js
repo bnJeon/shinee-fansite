@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Introduction from './components/Introduction';
 import Artist from './components/Artist';
 import History from './components/History';
-import Header from './components/layouts/Header'; // 헤더 가져오기
+import TopTrack from './components/TopTrack';
+import Login from './components/Login';
+import Header from './components/layouts/Header';
+import Footer from './components/layouts/Footer';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -16,13 +18,12 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        {/* Introduction 컴포넌트는 헤더를 포함하지 않음 */}
-        <Route path="/" element={<Introduction />} />
-        {/* History 컴포넌트 */}
+        {/* 루트 경로에 대한 라우팅 */}
+        <Route path="/" element={<AppContent />} />
+        <Route path="login" element={<LoginWithHeader />} />
         <Route path="/history" element={<HistoryWithHeader />} />
-        {/* Artist 컴포넌트 */}
         <Route path="/artist" element={<ArtistWithHeader />} />
-        {/* Artist 페이지로 이동할 때 헤더와 함께 렌더링 */}
+        <Route path="/toptrack" element={<TopTrackWithHeader/>} />
         <Route path="/app" element={<AppContent />} />
       </Routes>
     </div>
@@ -35,7 +36,19 @@ function AppContent() {
       <Header /> {/* 헤더 렌더링 */}
       <Artist />
       <History />
+      <TopTrack />
+      <Footer />
     </div>
+  );
+}
+
+function LoginWithHeader() {
+  return (
+    <>
+      <Header /> {/* 헤더 렌더링 */}
+      <Login />
+      <Footer />
+    </>
   );
 }
 
@@ -44,6 +57,7 @@ function ArtistWithHeader() {
     <>
       <Header /> {/* 헤더 렌더링 */}
       <Artist />
+      <Footer />
     </>
   );
 }
@@ -53,9 +67,19 @@ function HistoryWithHeader() {
     <>
       <Header /> {/* 헤더 렌더링 */}
       <History />
+      <Footer />
     </>
   );
 }
 
+function TopTrackWithHeader() {
+  return(
+    <>
+    <Header />
+    <TopTrack />
+    <Footer />
+    </>
+  );
+}
 
 export default App;

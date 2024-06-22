@@ -1,3 +1,11 @@
+/* 반응형 스타일 */
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 1.5rem; /* 작은 화면에서 폰트 크기를 줄임 */
+    }
+}
+
 @font-face {
   font-family: 'PartialSansKR-Regular';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/PartialSansKR-Regular.woff2') format('woff2');
