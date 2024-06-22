@@ -1,0 +1,25 @@
+
+/* 반응형 스타일 */
+
+@media (max-width: 768px) {
+    .artist-container {
+        flex-direction: column; /* 작은 화면에서 세로로 배치 */
+        align-items: center;
+    }
+    
+    .card {
+        max-width: 300px; /* 작은 화면에서 카드 최대 너비 설정 */
+    }
+
+    .card-img-container {
+        height: 200px; /* 작은 화면에서 이미지 높이 설정 */
+    }
+
+    .card-body {
+        padding: 20px; /* 작은 화면에서 적절한 패딩 추가 */
+    }
+
+    .info {
+        margin-top: 10px; /* 작은 화면에서 정보와 이미지 간격 조정 */
+    }
+}
